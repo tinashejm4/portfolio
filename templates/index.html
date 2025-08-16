@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Analyst Portfolio | Tinashe Munikwa</title>
+  <meta name="description" content="Portfolio landing page for a data analyst: projects, dashboards, case studies, and contact." />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="og:title" content="Data Analyst Portfolio" />
+  <meta property="og:description" content="Projects, dashboards, BI, and case studies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%231a1b26'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='Inter,system-ui,sans-serif' font-size='64'%3EData Analyst Portfolio%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230ea5e9'/%3E%3Cpath d='M22 70 L22 30 L34 30 L34 70 Z M42 70 L42 44 L54 44 L54 70 Z M62 70 L62 20 L74 20 L74 70 Z' fill='white'/%3E%3C/svg%3E" />
+
+  <!-- Tailwind CSS via CDN for a single-file setup -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (optional brand colors)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
+              500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    /* Fancy gradient background */
+    .bg-grid {
+      background-image: linear-gradient(to right, rgba(120, 120, 120, 0.07) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(120, 120, 120, 0.07) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tinashe Munikwa",
+    "jobTitle": "Data Analyst",
+    "url": "https://example.com",
+    "sameAs": [],
+    "knowsAbout": [
+      "SQL", "Python", "Tableau", "Power BI", "A/B Testing", "ETL", "DBT", "Airflow",
+      "Pandas", "NumPy", "Machine Learning", "Data Visualization"
+    ]
+  }
+  </script>
+</head>
+<body class="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Top Announcement / Toast -->
+  <div class="hidden sm:block text-center text-sm bg-gradient-to-r from-brand-500 via-cyan-500 to-emerald-500 text-white py-2">
+    <span class="font-medium">Available for freelance, Part-time & full-time roles</span>
+  </div>
+
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/60 border-b border-slate-200/50 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
+          <span class="inline-grid place-items-center w-8 h-8 rounded-xl bg-brand-600 text-white">DA</span>
+          <span>Data Analyst</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#projects" class="hover:text-brand-600">Projects</a>
+          <a href="#skills" class="hover:text-brand-600">Skills</a>
+          <a href="#case-studies" class="hover:text-brand-600">Case Studies</a>
+          <a href="#dashboards" class="hover:text-brand-600">Dashboards</a>
+          <a href="#contact" class="hover:text-brand-600">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900" aria-label="Toggle theme">
+            <svg id="themeIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M21.64 13a9 9 0 1 1-10.63-10.6A1 1 0 0 1 12.5 3a7 7 0 1 0 8.5 8.47 1 1 0 0 1 .64 1.53Z"/></svg>
+          </button>
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-4 py-2 text-sm font-medium shadow hover:bg-brand-700">Hire me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-grid"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-700 bg-brand-50 dark:bg-slate-900 px-3 py-1 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span> Data Analyst & BI Developer
+          </span>
+          <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+            Turning messy data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-500">clear decisions</span>
+          </h1>
+          <p class="mt-4 text-slate-600 dark:text-slate-300 max-w-xl">
+            I help teams uncover insights, automate reporting, and ship dashboards that move the needle. SQL, Python, Power BI/Tableau, and a storyteller’s eye.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#projects" class="rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-3 text-sm font-medium shadow hover:opacity-90">See Projects</a>
+            <a href="#contact" class="rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-900">Get in touch</a>
+            <a download href="#" class="rounded-xl border border-emerald-300 text-emerald-700 dark:text-emerald-300 px-5 py-3 text-sm font-medium hover:bg-emerald-50/50">Download CV</a>
+          </div>
+          <div class="mt-8 grid grid-cols-3 gap-6 text-center">
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+              <div class="text-3xl font-extrabold">35+</div>
+              <div class="text-xs uppercase tracking-widest text-slate-500">Dashboards shipped</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+              <div class="text-3xl font-extrabold">$2.1M</div>
+              <div class="text-xs uppercase tracking-widest text-slate-500">Impact influenced</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
+              <div class="text-3xl font-extrabold">5 yrs</div>
+              <div class="text-xs uppercase tracking-widest text-slate-500">Experience</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-6 bg-gradient-to-tr from-brand-600/20 to-emerald-500/20 blur-2xl -z-10 rounded-[2rem]"></div>
+          <svg viewBox="0 0 600 500" class="w-full h-auto" role="img" aria-label="Decorative chart illustration">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#3b82f6"/>
+                <stop offset="100%" stop-color="#10b981"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="600" height="500" rx="24" fill="url(#g1)" opacity="0.05"/>
+            <g transform="translate(40,40)">
+              <rect x="0" y="0" width="520" height="360" rx="16" fill="white" opacity="0.9" class="dark:fill-slate-900"/>
+              <g transform="translate(40,20)">
+                <polyline points="0,220 80,180 160,140 240,160 320,100 400,120" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+                <polyline points="0,240 80,200 160,200 240,140 320,160 400,80" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+                <g fill="#cbd5e1">
+                  <rect x="0" y="260" width="420" height="8" rx="4"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-8">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Core Skills</h2>
+        <a href="#contact" class="text-sm text-brand-600 hover:underline">Open to collaborations →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold mb-3">Data Wrangling & SQL</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Advanced joins, window functions, CTEs, query tuning. Snowflake, Postgres, BigQuery.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">SQL</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">dbt</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">ETL</span>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold mb-3">Python Analytics</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Pandas, NumPy, scikit-learn, forecasting, experimentation.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Pandas</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Jupyter</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">ML</span>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold mb-3">BI & Storytelling</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Power BI, Tableau, Looker—clean visuals, actionable narratives.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Power BI</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Tableau</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Looker</span>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold mb-3">Data Engineering</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">Pipelines, scheduling, and monitoring for reliable analytics.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Airflow</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Git</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">CI/CD</span>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold mb-3">Experimentation</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">A/B testing design, power analysis, and causal inference basics.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">A/B</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Bayesian</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Uplift</span>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-semibold mb-3">Domains</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-300">E‑commerce, SaaS, marketing analytics, operations.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">E‑commerce</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">SaaS</span>
+            <span class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-900">Ops</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-8">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Featured Projects</h2>
+        <a href="#" class="text-sm text-brand-600 hover:underline">View all →</a>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-950">
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold">Churn Prediction (SaaS)</h3>
+              <span class="text-[10px] uppercase tracking-widest bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-2 py-1 rounded">ML</span>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Built a logistic regression model from customer logs; reduced churn by 9.8% via targeted retention offers.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-500">
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">Python</li>
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">Pandas</li>
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">scikit-learn</li>
+            </ul>
+          </div>
+          <a href="#" class="block px-5 py-3 text-sm font-medium text-brand-700 dark:text-brand-300 border-t border-slate-200 dark:border-slate-800 group-hover:bg-slate-50 dark:group-hover:bg-slate-900">Case study →</a>
+        </article>
+        <!-- Card 2 -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-950">
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold">E‑commerce KPI Dashboard</h3>
+              <span class="text-[10px] uppercase tracking-widest bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300 px-2 py-1 rounded">BI</span>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Interactive Power BI dashboard tracking CAC/LTV, conversion rate, and cohort retention for 1.2M orders.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-500">
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">Power BI</li>
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">DAX</li>
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">SQL</li>
+            </ul>
+          </div>
+          <a href="#" class="block px-5 py-3 text-sm font-medium text-brand-700 dark:text-brand-300 border-t border-slate-200 dark:border-slate-800 group-hover:bg-slate-50 dark:group-hover:bg-slate-900">Live demo →</a>
+        </article>
+        <!-- Card 3 -->
+        <article class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-950">
+          <div class="p-5">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-semibold">Marketing Mix Modeling</h3>
+              <span class="text-[10px] uppercase tracking-widest bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-2 py-1 rounded">Stats</span>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300">Quantified channel ROAS and optimized spend; +14% incremental revenue at steady CAC.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 text-[11px] text-slate-500">
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">Python</li>
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">Bayesian</li>
+              <li class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900">Time series</li>
+            </ul>
+          </div>
+          <a href="#" class="block px-5 py-3 text-sm font-medium text-brand-700 dark:text-brand-300 border-t border-slate-200 dark:border-slate-800 group-hover:bg-slate-50 dark:group-hover:bg-slate-900">Notebook →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-8">Case Studies</h2>
+      <div class="space-y-6">
+        <details class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <summary class="cursor-pointer font-semibold flex items-center justify-between list-none">Reducing Refunds with Anomaly Detection <span class="text-xs text-slate-500">open</span></summary>
+          <div class="mt-4 text-sm text-slate-600 dark:text-slate-300">
+            Implemented isolation forests on transaction streams; alerted ops within 3 minutes of spikes, cutting fraudulent refunds by 31%.
+          </div>
+        </details>
+        <details class="group rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <summary class="cursor-pointer font-semibold">Fulfillment SLA Forecasting</summary>
+          <div class="mt-4 text-sm text-slate-600 dark:text-slate-300">Built Prophet-based forecasts to staff warehouses; on-time delivery rose from 86% to 95%.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboards (BI embeds placeholders) -->
+  <section id="dashboards" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Dashboards</h2>
+        <p class="text-sm text-slate-500">Click a tile to open the interactive version</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="#" class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-950 p-5">
+          <div class="aspect-[16/9] rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 grid place-items-center text-slate-400 text-sm">Power BI — Sales</div>
+          <div class="mt-3 font-medium">Executive Sales Overview</div>
+          <div class="text-xs text-slate-500">Power BI • Row-level security • DAX</div>
+        </a>
+        <a href="#" class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-950 p-5">
+          <div class="aspect-[16/9] rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 grid place-items-center text-slate-400 text-sm">Tableau — Growth</div>
+          <div class="mt-3 font-medium">Growth & Retention</div>
+          <div class="text-xs text-slate-500">Tableau • Cohorts • Level-of-detail</div>
+        </a>
+        <a href="#" class="group rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-white dark:bg-slate-950 p-5">
+          <div class="aspect-[16/9] rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 grid place-items-center text-slate-400 text-sm">Looker — Ops</div>
+          <div class="mt-3 font-medium">Operations SLA Monitor</div>
+          <div class="text-xs text-slate-500">Looker • Alerts • Explores</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials / Logos -->
+  <section class="py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6">
+        <blockquote class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 text-sm text-slate-700 dark:text-slate-300">
+          “We finally trust our numbers. The dashboard is now the first tab I open every morning.”
+          <div class="mt-3 text-xs text-slate-500">— VP Marketing, SaaS</div>
+        </blockquote>
+        <blockquote class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 text-sm text-slate-700 dark:text-slate-300">
+          “Tinashe connected marketing and ops like no one before. Highly recommended.”
+          <div class="mt-3 text-xs text-slate-500">— COO, E‑commerce</div>
+        </blockquote>
+        <blockquote class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 text-sm text-slate-700 dark:text-slate-300">
+          “Fast, communicative, and data‑driven. Great experience.”
+          <div class="mt-3 text-xs text-slate-500">— Head of Product</div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Let’s work together</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">Tell me about your project, timeline, and what success looks like.</p>
+          <div class="mt-6 space-y-3 text-sm">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.5H19"/></svg>
+              <button id="copyEmail" class="underline underline-offset-4 decoration-dotted">tinashe@example.com</button>
+              <span id="copyToast" class="text-xs text-emerald-600 hidden">Copied!</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-500">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+              Berlin, Germany (Open to remote)
+            </div>
+          </div>
+        </div>
+        <form class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6 space-y-4 bg-white dark:bg-slate-950" onsubmit="event.preventDefault(); document.getElementById('formToast').classList.remove('hidden'); this.reset();">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs text-slate-500">Name</label>
+              <input required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent p-2.5" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="text-xs text-slate-500">Email</label>
+              <input type="email" required class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent p-2.5" placeholder="you@company.com" />
+            </div>
+          </div>
+          <div>
+            <label class="text-xs text-slate-500">How can I help?</label>
+            <textarea required rows="4" class="mt-1 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent p-2.5" placeholder="Briefly describe your project"></textarea>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <div id="formToast" class="hidden text-xs text-emerald-600">Thanks! I’ll get back within 24 hours.</div>
+            <button class="rounded-xl bg-brand-600 text-white px-5 py-2.5 text-sm font-medium shadow hover:bg-brand-700">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> Tinashe Munikwa. All rights reserved.</div>
+      <div class="flex items-center gap-4 text-slate-500">
+        <a href="#projects" class="hover:text-slate-900 dark:hover:text-white">Projects</a>
+        <a href="#skills" class="hover:text-slate-900 dark:hover:text-white">Skills</a>
+        <a href="#contact" class="hover:text-slate-900 dark:hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: theme toggle, copy-to-clipboard, year -->
+  <script>
+    // Theme persistence
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    function setTheme(dark) {
+      if (dark) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+    // Load saved theme or system preference
+    (function initTheme(){
+      const saved = localStorage.getItem('theme');
+      if (saved) { setTheme(saved === 'dark'); }
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme(true);
+      }
+    })();
+    themeToggle?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      setTheme(!isDark);
+    });
+
+    // Copy email
+    const copyBtn = document.getElementById('copyEmail');
+    const copyToast = document.getElementById('copyToast');
+    copyBtn?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(copyBtn.textContent.trim());
+        copyToast.classList.remove('hidden');
+        setTimeout(() => copyToast.classList.add('hidden'), 1600);
+      } catch (e) {
+        alert('Copy failed, please email manually.');
+      }
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
